@@ -1,6 +1,8 @@
 #include <iostream>
 #include <stdlib.h>
 #include <vector> 
+#include <algorithm> 
+
 using namespace std;
 int main(){
     int stones = 2000001;
@@ -26,19 +28,9 @@ int main(){
     }
 
     string stone_pos = right_stone + left_stone;
+    vector<int> f_stone_pos;
 
-    vector <int> f_stone_pos;
-
-
-    for(int i=0; i<stone_pos.size(); i++){
-        char tmp = stone_pos[i];
-        f_stone_pos.push_back(stoi(tmp));
-
-    }
-    
-    
-
-    cout << stone_pos << endl;
+    //重複文字を削除してsortしてintへ変換して出力
 
     return 0;
 }
