@@ -5,7 +5,7 @@ using namespace std;
 
 int main(){
     // int N = 5;
-    // int pn[N+1] = {0,2,4,3,5,1};
+    // int pn[N+1] = {0,5,4,1,2,3};
     
     int N;
     cin >> N;
@@ -26,8 +26,14 @@ int main(){
         // cout << "pn" << endl;
         // cout << pn[i] <<endl;
         if(pn[i]!=i){
-            swap(pn[i], pn[pn[i]]);
-            ng_count++;
+            if(pn[pn[i]]==i){
+                swap(pn[i], pn[pn[i]]);
+                ng_count++;
+            }
+        else if(pn[pn[i]]!=pn[i]){
+                cout << "NO" << endl;
+                return 0 ;
+            }
         }
         else{
 
@@ -39,12 +45,15 @@ int main(){
     if(ng_count<=1){
         cout<< "OK" << endl;
     }
-    else if(ng_count>=2){
-        cout<< "NO" << endl;
-    }
     else{
-        
+        cout << "NO" << endl;
     }
+    // else if(ng_count>=2){
+    //     cout<< "NO" << endl;
+    // }
+    // else{
+        
+    // }
 
     // for(int i; i<N; i++){}
 }
