@@ -30,7 +30,7 @@ int main(){
     string stone_pos = right_stone + left_stone;
     vector<int> f_stone_pos;
 
-    //重複文字を削除してsortしてintへ変換して出力
+    //todo:重複文字を削除してsortしてintへ変換して出力
 
     return 0;
 }
