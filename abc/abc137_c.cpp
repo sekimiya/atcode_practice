@@ -18,7 +18,6 @@ int main(){
     // ,"twoplusone"
     // ,"aaaabaaaaa"
     // };
-
     
     long N;
     vector<string> v;
@@ -33,28 +32,12 @@ int main(){
     //     sort(v[i].begin(),v[i].end());
 	};
 
-
-    // for(long i=0; i<N; i++){
-    //     sort(v[i].begin(),v[i].end());
-    //     // cout << v[i] << endl;
-    // }
     // for(long i=0; i<N; i++){
     //     sort(v[i].begin(),v[i].end());
     //     // cout << v[i] << endl;
     // }
 
     long ans_n = 0;
-
-    // for(long i=0; i<N; i++){
-    //     if (std::equal(v.begin(), v.end(), v.begin())) {
-    //         std::cout << "equal" << std::endl;
-    //         ans_n++;
-    //     } else {
-    //         std::cout << "not equal" << std::endl;
-    //     }
-    // }
-
-
 
     for(long i=0; i<N; i++){
         string tmp_i = v[i];
@@ -70,11 +53,4 @@ int main(){
     }
     
     cout << ans_n << endl;
-
-	// for(int i=0; i<N; i++) {
-	// 	string x;
-	// 	cin >> x;   
-    //     v.push_back(x);
-	// };
-
 }
