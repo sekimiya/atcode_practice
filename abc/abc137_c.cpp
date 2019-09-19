@@ -18,7 +18,7 @@ int main(){
     // ,"twoplusone"
     // ,"aaaabaaaaa"
     // };
-    
+
     long N;
     vector<string> v;
 
@@ -29,7 +29,6 @@ int main(){
 		cin >> x;   
         v.push_back(x);
         sort(v[i].begin(),v[i].end());
-    //     sort(v[i].begin(),v[i].end());
 	};
 
     // for(long i=0; i<N; i++){
