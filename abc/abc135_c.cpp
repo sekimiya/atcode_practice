@@ -68,10 +68,11 @@ int main(){
         }
 
         // どっちの勇者が行くのか
-        int first = max(B[i], B[i+1]);
-        int second = min(B[i], B[i+1]);
+        int first = max(B[i-1], B[i]);
+        int second = min(B[i-1], B[i]);
 
-
+        cout << "first: " << first << endl; 
+        cout << "second: " << second << endl;
         // cout << "which yuu: "<< which_yuu << endl;
 
         if(A[i]>=0){ 
