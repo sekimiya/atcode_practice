@@ -22,14 +22,14 @@ int main(){
     // }
 
     // output = 9 
-    // int N = 2;
-    // int A[N+1] = {3,5,2};
-    // int B[N] = {4,5};
+    int N = 2;
+    int A[N+1] = {3,5,2};
+    int B[N] = {4,5};
 
-    // ouput = 22
-    int N = 3;
-    int A[N+1] = {5, 6, 3, 8};
-    int B[N] = {5, 100, 3};
+    // // ouput = 22
+    // int N = 3;
+    // int A[N+1] = {5, 6, 3, 8};
+    // int B[N] = {5, 100, 3};
 
     int mons_sum = 0;
     int big_yuu;
@@ -43,10 +43,10 @@ int main(){
             int big_tmp = min(A[i+1], B[i]);
             // big_yuu = B[i+1];
             // cout << B[]
-            cout <<"A[i+1]: " << A[i+1] << endl;
-            cout << "B[i]: "<< B[i] << endl;
+            // cout <<"A[i+1]: " << A[i+1] << endl;
+            // cout << "B[i]: "<< B[i] << endl;
             A[i+1] -= big_tmp;
-            cout << "big_tmp: " << big_tmp << endl;
+            // cout << "big_tmp: " << big_tmp << endl;
             mons_sum += big_tmp;
             // cout << mons_sum << endl;
         }
@@ -60,20 +60,33 @@ int main(){
             // cout << A[i] << endl;
             // cout << B[i] << endl;
             A[i] -= little_tmp;
-            cout << "A[i-1]: " << A[i-1]<<endl;
-            cout << "B[i-1]: " << B[i-1]<<endl;
-            cout << "little_tmp: " << little_tmp << endl;
+            // cout << "A[i-1]: " << A[i-1]<<endl;
+            // cout << "B[i-1]: " << B[i-1]<<endl;
+            // cout << "little_tmp: " << little_tmp << endl;
             mons_sum += little_tmp;
             // cout << mons_sum << endl;
         }
 
         // どっちの勇者が行くのか
-        int which_yuu = max(B[i], B[i+1]);
+        int first = max(B[i], B[i+1]);
+        int second = min(B[i], B[i+1]);
+
+
+        // cout << "which yuu: "<< which_yuu << endl;
 
         if(A[i]>=0){ 
-            int which_tmp = min(which_yuu, A[i]);
-            A[i] -= which_tmp;
-            mons_sum += which_tmp;
+            int tmp_first = min(first, A[i]);
+            A[i] -= tmp_first;
+            mons_sum += tmp_first;
+            cout << "mons_sum: "<<  mons_sum << endl;
+        }
+
+        if(A[i]>=0){
+            int tmp_secod =min(second, A[i]); 
+            A[i] -= tmp_secod;
+            mons_sum += tmp_secod;
+            cout <<"tmp_second: " << tmp_secod << endl;
+              cout << "mons_sum: "<<  mons_sum << endl;
         }
 
         
