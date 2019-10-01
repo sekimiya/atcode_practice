@@ -22,9 +22,14 @@ int main(){
     // }
 
     // output = 9 
-    int N = 2;
-    int A[N+1] = {3,5,2};
-    int B[N] = {4,5};
+    // int N = 2;
+    // int A[N+1] = {3,5,2};
+    // int B[N] = {4,5};
+
+    // ouput = 22
+    int N = 3;
+    int A[N+1] = {5, 6, 3, 8};
+    int B[N] = {5, 100, 3};
 
     int mons_sum = 0;
     int big_yuu;
@@ -62,12 +67,13 @@ int main(){
             // cout << mons_sum << endl;
         }
 
-       
+        // どっちの勇者が行くのか
+        int which_yuu = max(B[i], B[i+1]);
 
-        if(A[i]>=0){
-            int tmp_which = min(B[i], B[i+1]);
-            A[i] -= min(tmp_which, A[i]);
-            mons_sum += tmp_which;
+        if(A[i]>=0){ 
+            int which_tmp = min(which_yuu, A[i]);
+            A[i] -= which_tmp;
+            mons_sum += which_tmp;
         }
 
         
